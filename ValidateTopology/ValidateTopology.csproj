@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="dirtyAreaLayer.JSON" />
+		<None Remove="script.txt" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="dirtyAreaLayer.JSON">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Esri.ArcGISRuntime.Toolkit.WPF" Version="200.3.0" />
+	</ItemGroup>
+
+</Project>

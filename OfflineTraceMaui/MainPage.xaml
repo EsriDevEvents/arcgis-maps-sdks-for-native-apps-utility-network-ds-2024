@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfflineTraceMaui.MainPage"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+             xmlns:esriTool="clr-namespace:Esri.ArcGISRuntime.Toolkit.Maui;assembly=Esri.ArcGISRuntime.Toolkit.Maui">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".4*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <!-- MapView -->
+        <esri:MapView x:Name="MyMapView"
+                      GeoViewTapped="OnGeoViewTapped"
+                      Grid.ColumnSpan="2" />
+        <!-- Left Navigation Bar -->
+        <Border Stroke="Black"
+                StrokeThickness="0.5">
+            <Grid x:Name="Panel"
+                  BackgroundColor="#C0F0F0F0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <!-- Switch Map -->
+                <Border Stroke="#CC0078D7"
+                        StrokeThickness="1"
+                        Grid.Row="0">
+                    <Button x:Name="DownloadOfflineMap"
+                            Text="Download Offline Map"
+                            Style="{StaticResource GroupLabelStyle}"
+                            Clicked="OnDownloadOfflineMap" />
+                </Border>
+                <!-- Trace -->
+                <Border Stroke="#CC0078D7"
+                        StrokeThickness="1"
+                        Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Trace Types" />
+                        <Picker x:Name="Traces"
+                                Grid.Row="1"
+                                ItemDisplayBinding="{Binding Name}" />
+                        <Grid  Grid.Row="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="AddStartingPointBtn"
+                                    Text="Add Starting"
+                                    Clicked="OnAddStartingPoint"
+                                    Style="{StaticResource ButtonStyle}" />
+                            <Button Text="Maintenance"
+                                    Style="{StaticResource ButtonStyle}"
+                                    Clicked="OnReset"
+                                    Grid.Column="1" />
+                            <Ellipse Fill="Red"
+                                     WidthRequest="30"
+                                     HeightRequest="30"
+                                     Margin="0,-35,0,0"
+                                     HorizontalOptions="End"
+                                     IsVisible="False"
+                                     x:Name="Badge"
+                                     Grid.Column="1" />
+                            <Label x:Name="BadgeLabel"
+                                   Text="3"
+                                   FontAttributes="Bold"
+                                   TextColor="White"
+                                   HorizontalOptions="End"
+                                   Margin="0,5,10,0"
+                                   Grid.Column="1"
+                                   IsVisible="{Binding Source={x:Reference Badge}, Path=IsVisible}" />
+                        </Grid>
+                        <ListView x:Name="StartingPoints"
+                                  ItemSelected="OnStartingPointSelected"
+                                  Grid.Row="3">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid Padding="10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="25" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="25" />
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding Swatch}"
+                                                   Margin="5" />
+                                            <Grid Grid.Column="1">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Label Text="{Binding Element.NetworkSource.Name}" />
+                                                <Label Text="{Binding Element.AssetGroup.Name}"
+                                                       FontAttributes="Bold"
+                                                       Grid.Row="1" />
+                                            </Grid>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <Border  Grid.Row="4">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Button Text="Remove Selected Starting Point"
+                                        x:Name="DeleteSelectedBtn"
+                                        IsVisible="False"
+                                        Style="{StaticResource ButtonStyle}"
+                                        Clicked="OnDeleteStartingPoint" />
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Picker x:Name="TerminalPicker"
+                                            IsVisible="False"
+                                            ItemDisplayBinding="{Binding Name}" />
+                                    <Button x:Name="SelectTerminalBtn"
+                                            Text="Select Terminal"
+                                            Style="{StaticResource ButtonStyle}"
+                                            IsVisible="{Binding Source={x:Reference TerminalPicker}, Path=IsVisible}"
+                                            Clicked="OnTerminalChanged"
+                                            Grid.Column="1" />
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="Fraction Along Edge"
+                                           VerticalOptions="Center"
+                                           Margin="5"
+                                           IsVisible="{Binding Source={x:Reference FractionAlongEdgeSlider}, Path=IsVisible}" />
+                                    <Slider x:Name="FractionAlongEdgeSlider"
+                                            Grid.Column="1"
+                                            Minimum="0"
+                                            Maximum="1"
+                                            IsVisible="False"
+                                            VerticalOptions="Center"
+                                            ValueChanged="OnFractionAlongEdgeChanged" />
+                                </Grid>
+                            </Grid>
+                        </Border>
+                        <HorizontalStackLayout x:Name="AvailableColors"
+                                               Grid.Row="5" />
+                        <IndicatorView x:Name="indicatorView"
+                                       IndicatorsShape="Square"
+                                       IndicatorColor="LightGray"
+                                       SelectedIndicatorColor="DarkGray"
+                                       HorizontalOptions="Center"
+                                       Margin="0,0,0,40"
+                                       Grid.Row="6" />
+                        <Button x:Name="TraceBtn"
+                                Text="Run Trace"
+                                Clicked="OnRunTrace"
+                                Style="{StaticResource GroupLabelStyle}"
+                                Grid.Row="7" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!-- Loading Indicator -->
+        <Grid x:Name="LoadingIndicator"
+              Grid.RowSpan="2"
+              Grid.ColumnSpan="2"
+              BackgroundColor="#CF6E6E6E"
+              IsVisible="False">
+            <Border x:Name="StatusBorder"
+                    StrokeThickness="0">
+                <Grid HorizontalOptions="Center"
+                      VerticalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label x:Name="LoadingIndicatorLabel"
+                           Margin="10"
+                           FontSize="18"
+                           Text="Loading offline map..."
+                           HorizontalTextAlignment="Center"
+                           TextColor="White" />
+                    <ProgressBar x:Name="LoadingIndicatorProgressBar"
+                                 ProgressColor="{StaticResource Secondary}"
+                                 Grid.Row="1"
+                                 HeightRequest="10"
+                                 HorizontalOptions="Center"
+                                 IsEnabled="True"
+                                 VerticalOptions="Center"
+                                 WidthRequest="100" />
+                    <Button x:Name="CancelButton"
+                            Text="Cancel"
+                            Style="{StaticResource ButtonStyle}"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            Clicked="OnJobCancel"
+                            Grid.Row="3"
+                            IsVisible="False" />
+                </Grid>
+            </Border>
+        </Grid>
+        <ActivityIndicator x:Name="IsBusy"
+                           IsRunning="True"
+                           IsVisible="False"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+    </Grid>
+</ContentPage>

@@ -1,0 +1,558 @@
+﻿{
+  "authoringInfo": {
+    "colorRamp": {
+      "colorRamps": [
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 229, 252, 199, 255 ],
+          "toColor": [ 229, 252, 199, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 248, 184, 252, 255 ],
+          "toColor": [ 248, 184, 252, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 194, 231, 252, 255 ],
+          "toColor": [ 194, 231, 252, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 252, 193, 184, 255 ],
+          "toColor": [ 252, 193, 184, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 179, 188, 252, 255 ],
+          "toColor": [ 179, 188, 252, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 252, 215, 244, 255 ],
+          "toColor": [ 252, 215, 244, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 192, 252, 234, 255 ],
+          "toColor": [ 192, 252, 234, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 252, 228, 182, 255 ],
+          "toColor": [ 252, 228, 182, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 252, 179, 202, 255 ],
+          "toColor": [ 252, 179, 202, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 187, 210, 252, 255 ],
+          "toColor": [ 187, 210, 252, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 182, 252, 184, 255 ],
+          "toColor": [ 182, 252, 184, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 252, 228, 212, 255 ],
+          "toColor": [ 252, 228, 212, 255 ],
+          "type": "algorithmic"
+        },
+        {
+          "algorithm": "esriCIELabAlgorithm",
+          "fromColor": [ 207, 179, 252, 255 ],
+          "toColor": [ 207, 179, 252, 255 ],
+          "type": "algorithmic"
+        }
+      ],
+      "type": "multipart"
+    }
+  },
+  "fieldDelimiter": ",",
+  "type": "uniqueValue",
+  "uniqueValueGroups": [
+    {
+      "classes": [
+        {
+          "description": "Disabled",
+          "label": "Disabled",
+          "symbol": {
+            "type": "CIMSymbolReference",
+            "unknown": {
+              "symbol": {
+                "angleAlignment": "Map",
+                "symbolLayers": [
+                  {
+                    "anchor3D": "Center",
+                    "capStyle": "Round",
+                    "color": [ 128, 128, 255, 255 ],
+                    "enable": true,
+                    "height3D": 1,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10,
+                    "type": "CIMSolidStroke",
+                    "width": 1.5
+                  },
+                  {
+                    "color": [ 128, 128, 255, 128 ],
+                    "enable": true,
+                    "type": "CIMSolidFill"
+                  }
+                ],
+                "type": "CIMPolygonSymbol"
+              }
+            }
+          },
+          "values": [ [ "0" ] ]
+        },
+        {
+          "description": "Dirty",
+          "label": "Dirty",
+          "symbol": {
+            "type": "CIMSymbolReference",
+            "unknown": {
+              "symbol": {
+                "angleAlignment": "Map",
+                "symbolLayers": [
+                  {
+                    "anchor3D": "Center",
+                    "capStyle": "Round",
+                    "color": [ 128, 128, 255, 255 ],
+                    "enable": true,
+                    "height3D": 1,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10,
+                    "type": "CIMSolidStroke",
+                    "width": 1.5
+                  },
+                  {
+                    "enable": true,
+                    "lineSymbol": {
+                      "symbolLayers": [
+                        {
+                          "anchor3D": "Center",
+                          "capStyle": "Round",
+                          "color": [ 128, 128, 255, 255 ],
+                          "enable": true,
+                          "height3D": 1,
+                          "joinStyle": "Round",
+                          "lineStyle3D": "Strip",
+                          "miterLimit": 10,
+                          "type": "CIMSolidStroke",
+                          "width": 1
+                        }
+                      ],
+                      "type": "CIMLineSymbol"
+                    },
+                    "rotation": 315,
+                    "separation": 3,
+                    "type": "CIMHatchFill"
+                  }
+                ],
+                "type": "CIMPolygonSymbol"
+              }
+            }
+          },
+          "values": [ [ "1" ] ]
+        },
+        {
+          "description": "Error",
+          "label": "Error",
+          "symbol": {
+            "type": "CIMSymbolReference",
+            "unknown": {
+              "symbol": {
+                "angleAlignment": "Map",
+                "symbolLayers": [
+                  {
+                    "anchor3D": "Center",
+                    "capStyle": "Round",
+                    "color": [ 255, 0, 0, 255 ],
+                    "enable": true,
+                    "height3D": 1,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10,
+                    "type": "CIMSolidStroke",
+                    "width": 1.5
+                  },
+                  {
+                    "enable": true,
+                    "lineSymbol": {
+                      "symbolLayers": [
+                        {
+                          "anchor3D": "Center",
+                          "capStyle": "Round",
+                          "color": [ 255, 0, 0, 255 ],
+                          "enable": true,
+                          "height3D": 1,
+                          "joinStyle": "Round",
+                          "lineStyle3D": "Strip",
+                          "miterLimit": 10,
+                          "type": "CIMSolidStroke",
+                          "width": 1
+                        }
+                      ],
+                      "type": "CIMLineSymbol"
+                    },
+                    "rotation": 45,
+                    "separation": 4,
+                    "type": "CIMHatchFill"
+                  }
+                ],
+                "type": "CIMPolygonSymbol"
+              }
+            }
+          },
+          "values": [ [ "2" ] ]
+        },
+        {
+          "description": "Dirty and Error",
+          "label": "Dirty and Error",
+          "symbol": {
+            "type": "CIMSymbolReference",
+            "unknown": {
+              "symbol": {
+                "angleAlignment": "Map",
+                "symbolLayers": [
+                  {
+                    "anchor3D": "Center",
+                    "capStyle": "Round",
+                    "color": [ 255, 0, 0, 255 ],
+                    "enable": true,
+                    "height3D": 1,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10,
+                    "type": "CIMSolidStroke",
+                    "width": 1.5
+                  },
+                  {
+                    "enable": true,
+                    "lineSymbol": {
+                      "symbolLayers": [
+                        {
+                          "anchor3D": "Center",
+                          "capStyle": "Round",
+                          "color": [ 128, 128, 255, 255 ],
+                          "enable": true,
+                          "height3D": 1,
+                          "joinStyle": "Round",
+                          "lineStyle3D": "Strip",
+                          "miterLimit": 10,
+                          "type": "CIMSolidStroke",
+                          "width": 1
+                        }
+                      ],
+                      "type": "CIMLineSymbol"
+                    },
+                    "rotation": 315,
+                    "separation": 3,
+                    "type": "CIMHatchFill"
+                  }
+                ],
+                "type": "CIMPolygonSymbol"
+              }
+            }
+          },
+          "values": [ [ "3" ] ]
+        },
+        {
+          "description": "Subnetwork Error",
+          "label": "Subnetwork Error",
+          "symbol": {
+            "type": "CIMSymbolReference",
+            "unknown": {
+              "symbol": {
+                "angleAlignment": "Map",
+                "symbolLayers": [
+                  {
+                    "anchor3D": "Center",
+                    "capStyle": "Round",
+                    "color": [ 255, 0, 0, 255 ],
+                    "enable": true,
+                    "height3D": 1,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10,
+                    "type": "CIMSolidStroke",
+                    "width": 1.5
+                  },
+                  {
+                    "color": [ 255, 127, 127, 128 ],
+                    "enable": true,
+                    "type": "CIMSolidFill"
+                  }
+                ],
+                "type": "CIMPolygonSymbol"
+              }
+            }
+          },
+          "values": [ [ "4" ] ]
+        }
+      ],
+      "heading": ""
+    }
+  ],
+  "uniqueValueInfos": [
+    {
+      "label": "Disabled",
+      "symbol": {
+        "symbol": {
+          "symbolLayers": [
+            {
+              "capStyle": "Round",
+              "color": [ 128, 128, 255, 255 ],
+              "colorLocked": false,
+              "enable": true,
+              "joinStyle": "Round",
+              "lineStyle3D": "Strip",
+              "miterLimit": 10.0,
+              "type": "CIMSolidStroke",
+              "unknown": {
+                "anchor3D": "Center",
+                "height3D": 1
+              },
+              "width": 1.5
+            },
+            {
+              "color": [ 128, 128, 255, 128 ],
+              "colorLocked": false,
+              "enable": true,
+              "type": "CIMSolidFill"
+            }
+          ],
+          "type": "CIMPolygonSymbol",
+          "unknown": { "angleAlignment": "Map" }
+        },
+        "type": "CIMSymbolReference"
+      },
+      "value": "0"
+    },
+    {
+      "label": "Dirty",
+      "symbol": {
+        "symbol": {
+          "symbolLayers": [
+            {
+              "capStyle": "Round",
+              "color": [ 128, 128, 255, 255 ],
+              "colorLocked": false,
+              "enable": true,
+              "joinStyle": "Round",
+              "lineStyle3D": "Strip",
+              "miterLimit": 10.0,
+              "type": "CIMSolidStroke",
+              "unknown": {
+                "anchor3D": "Center",
+                "height3D": 1
+              },
+              "width": 1.5
+            },
+            {
+              "colorLocked": false,
+              "enable": true,
+              "lineSymbol": {
+                "symbolLayers": [
+                  {
+                    "capStyle": "Round",
+                    "color": [ 128, 128, 255, 255 ],
+                    "colorLocked": false,
+                    "enable": true,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10.0,
+                    "type": "CIMSolidStroke",
+                    "unknown": {
+                      "anchor3D": "Center",
+                      "height3D": 1
+                    },
+                    "width": 1.0
+                  }
+                ],
+                "type": "CIMLineSymbol"
+              },
+              "offsetX": 0.0,
+              "offsetY": 0.0,
+              "rotation": 315.0,
+              "separation": 3.0,
+              "type": "CIMHatchFill"
+            }
+          ],
+          "type": "CIMPolygonSymbol",
+          "unknown": { "angleAlignment": "Map" }
+        },
+        "type": "CIMSymbolReference"
+      },
+      "value": "1"
+    },
+    {
+      "label": "Error",
+      "symbol": {
+        "symbol": {
+          "symbolLayers": [
+            {
+              "capStyle": "Round",
+              "color": [ 255, 0, 0, 255 ],
+              "colorLocked": false,
+              "enable": true,
+              "joinStyle": "Round",
+              "lineStyle3D": "Strip",
+              "miterLimit": 10.0,
+              "type": "CIMSolidStroke",
+              "unknown": {
+                "anchor3D": "Center",
+                "height3D": 1
+              },
+              "width": 1.5
+            },
+            {
+              "colorLocked": false,
+              "enable": true,
+              "lineSymbol": {
+                "symbolLayers": [
+                  {
+                    "capStyle": "Round",
+                    "color": [ 255, 0, 0, 255 ],
+                    "colorLocked": false,
+                    "enable": true,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10.0,
+                    "type": "CIMSolidStroke",
+                    "unknown": {
+                      "anchor3D": "Center",
+                      "height3D": 1
+                    },
+                    "width": 1.0
+                  }
+                ],
+                "type": "CIMLineSymbol"
+              },
+              "offsetX": 0.0,
+              "offsetY": 0.0,
+              "rotation": 45.0,
+              "separation": 4.0,
+              "type": "CIMHatchFill"
+            }
+          ],
+          "type": "CIMPolygonSymbol",
+          "unknown": { "angleAlignment": "Map" }
+        },
+        "type": "CIMSymbolReference"
+      },
+      "value": "2"
+    },
+    {
+      "label": "Dirty and Error",
+      "symbol": {
+        "symbol": {
+          "symbolLayers": [
+            {
+              "capStyle": "Round",
+              "color": [ 255, 0, 0, 255 ],
+              "colorLocked": false,
+              "enable": true,
+              "joinStyle": "Round",
+              "lineStyle3D": "Strip",
+              "miterLimit": 10.0,
+              "type": "CIMSolidStroke",
+              "unknown": {
+                "anchor3D": "Center",
+                "height3D": 1
+              },
+              "width": 1.5
+            },
+            {
+              "colorLocked": false,
+              "enable": true,
+              "lineSymbol": {
+                "symbolLayers": [
+                  {
+                    "capStyle": "Round",
+                    "color": [ 128, 128, 255, 255 ],
+                    "colorLocked": false,
+                    "enable": true,
+                    "joinStyle": "Round",
+                    "lineStyle3D": "Strip",
+                    "miterLimit": 10.0,
+                    "type": "CIMSolidStroke",
+                    "unknown": {
+                      "anchor3D": "Center",
+                      "height3D": 1
+                    },
+                    "width": 1.0
+                  }
+                ],
+                "type": "CIMLineSymbol"
+              },
+              "offsetX": 0.0,
+              "offsetY": 0.0,
+              "rotation": 315.0,
+              "separation": 3.0,
+              "type": "CIMHatchFill"
+            }
+          ],
+          "type": "CIMPolygonSymbol",
+          "unknown": { "angleAlignment": "Map" }
+        },
+        "type": "CIMSymbolReference"
+      },
+      "value": "3"
+    },
+    {
+      "label": "Subnetwork Error",
+      "symbol": {
+        "symbol": {
+          "symbolLayers": [
+            {
+              "capStyle": "Round",
+              "color": [ 255, 0, 0, 255 ],
+              "colorLocked": false,
+              "enable": true,
+              "joinStyle": "Round",
+              "lineStyle3D": "Strip",
+              "miterLimit": 10.0,
+              "type": "CIMSolidStroke",
+              "unknown": {
+                "anchor3D": "Center",
+                "height3D": 1
+              },
+              "width": 1.5
+            },
+            {
+              "color": [ 255, 127, 127, 128 ],
+              "colorLocked": false,
+              "enable": true,
+              "type": "CIMSolidFill"
+            }
+          ],
+          "type": "CIMPolygonSymbol",
+          "unknown": { "angleAlignment": "Map" }
+        },
+        "type": "CIMSymbolReference"
+      },
+      "value": "4"
+    }
+  ],
+  "valueExpression": "var Status = $feature.status; if (Status == 0) return 0; if ((Status & 0x7) > 0) if ((Status & 0x38) == 0) return 1; else return 3; if ((Status & 0x20) > 0) return 4; return 2;",
+  "valueExpressionTitle": "Status"
+}

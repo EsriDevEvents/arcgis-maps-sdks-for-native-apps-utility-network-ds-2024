@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateTopology", "ValidateTopology.csproj", "{040D6B70-09FD-4D36-9B96-78DD037591D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{040D6B70-09FD-4D36-9B96-78DD037591D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040D6B70-09FD-4D36-9B96-78DD037591D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040D6B70-09FD-4D36-9B96-78DD037591D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040D6B70-09FD-4D36-9B96-78DD037591D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ABD96F60-7C64-47DF-9DB9-31B730CB5D90}
+	EndGlobalSection
+EndGlobal

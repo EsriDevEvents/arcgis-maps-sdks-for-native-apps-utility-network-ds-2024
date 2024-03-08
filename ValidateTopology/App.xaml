@@ -1,0 +1,5 @@
+﻿<Application x:Class="ValidateTopology.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ValidateTopology"
+             StartupUri="MainWindow.xaml"></Application>
