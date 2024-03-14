@@ -47,7 +47,6 @@
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Label Text="Trace Types" />
                         <Picker x:Name="Traces"
@@ -159,18 +158,11 @@
                         </Border>
                         <HorizontalStackLayout x:Name="AvailableColors"
                                                Grid.Row="5" />
-                        <IndicatorView x:Name="indicatorView"
-                                       IndicatorsShape="Square"
-                                       IndicatorColor="LightGray"
-                                       SelectedIndicatorColor="DarkGray"
-                                       HorizontalOptions="Center"
-                                       Margin="0,0,0,40"
-                                       Grid.Row="6" />
                         <Button x:Name="TraceBtn"
                                 Text="Run Trace"
                                 Clicked="OnRunTrace"
                                 Style="{StaticResource GroupLabelStyle}"
-                                Grid.Row="7" />
+                                Grid.Row="6" />
                     </Grid>
                 </Border>
             </Grid>
